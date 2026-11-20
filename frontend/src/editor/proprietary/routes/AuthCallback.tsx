@@ -17,6 +17,7 @@ import { withBasePath } from "@editor/constants/app";
 import "@editor/auth/ui/auth.css";
 import loginHeader from "@editor/assets/brand/modern-logo/LoginLightModeHeader.svg";
 import i18n from "@editor/i18n";
+import { APP_NAME } from "@editor/constants/branding";
 
 /**
  * OAuth Callback Handler
@@ -134,12 +135,12 @@ export default function AuthCallback() {
       <div className="auth-logo-block">
         <img
           src={loginHeader}
-          alt="Stirling PDF"
+          alt={APP_NAME}
           className="auth-logo-header auth-logo-header--light"
         />
         <img
           src={withBasePath("/modern-logo/LoginDarkModeHeader.svg")}
-          alt="Stirling PDF"
+          alt={APP_NAME}
           className="auth-logo-header auth-logo-header--dark"
         />
       </div>

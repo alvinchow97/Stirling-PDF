@@ -11,6 +11,7 @@ import "@editor/routes/authShared/saas-auth.css";
 import { withBasePath } from "@editor/constants/app";
 import ErrorMessage from "@editor/auth/ui/ErrorMessage";
 import loginHeader from "@editor/assets/brand/modern-logo/LoginLightModeHeader.svg";
+import { APP_NAME } from "@editor/constants/branding";
 
 // Supabase OAuth consent screen for MCP clients (e.g. Claude): loads the pending
 // authorization and forwards approve/deny to GoTrue, which redirects to the client.
@@ -80,7 +81,7 @@ export default function OAuthConsent() {
   }, [location.search]);
 
   useDocumentMeta({
-    title: `${t("oauthConsent.title", "Authorize access")} - Stirling PDF`,
+    title: `${t("oauthConsent.title", "Authorize access")} - ${APP_NAME}`,
   });
 
   // The GET consumes the authorization, so run it once per id: a StrictMode rerun
@@ -213,12 +214,12 @@ export default function OAuthConsent() {
     <div className="auth-logo-block">
       <img
         src={loginHeader}
-        alt="Stirling PDF"
+        alt={APP_NAME}
         className="auth-logo-header auth-logo-header--light"
       />
       <img
         src={withBasePath("/modern-logo/LoginDarkModeHeader.svg")}
-        alt="Stirling PDF"
+        alt={APP_NAME}
         className="auth-logo-header auth-logo-header--dark"
       />
     </div>
@@ -248,7 +249,7 @@ export default function OAuthConsent() {
         <Text ta="center" c="dimmed" mb="lg">
           {t(
             "oauthConsent.signInPrompt",
-            "Sign in to your Stirling PDF account to continue connecting the app.",
+            "Sign in to your {{appName}} account to continue connecting the app.",
           )}
         </Text>
         <Button
@@ -294,7 +295,7 @@ export default function OAuthConsent() {
       <Text ta="center" c="dimmed" mb="lg">
         {t("oauthConsent.requesting", {
           app: appName,
-          defaultValue: `${appName} wants to access your Stirling PDF account`,
+          defaultValue: `${appName} wants to access your {{appName}} account`,
         })}
       </Text>
 
@@ -313,7 +314,7 @@ export default function OAuthConsent() {
           <List.Item>
             {t("oauthConsent.access.tools", {
               app: appName,
-              defaultValue: `Use your Stirling PDF tools on your behalf - convert, edit, sign, secure and process your documents`,
+              defaultValue: `Use your {{appName}} tools on your behalf - convert, edit, sign, secure and process your documents`,
             })}
           </List.Item>
           <List.Item>

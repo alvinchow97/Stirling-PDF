@@ -6,6 +6,7 @@ import { Icon } from "@editor/ui/Icon";
 import wordmarkLight from "@editor/assets/brand/modern-logo/StirlingProcessorLogoBlackText.svg";
 import wordmarkDark from "@editor/assets/brand/modern-logo/StirlingProcessorLogoWhiteText.svg";
 import "@editor/components/shared/StepModalHeader.css";
+import { APP_NAME } from "@editor/constants/branding";
 
 /**
  * Header for any stepped flow modal: identity row, step badge, progress bar, step title. Worn by
@@ -59,7 +60,7 @@ export function StepModalHeader({
           <div className="portal-stepmodal__brand">
             <img
               src={wordmarkLight}
-              alt="Stirling"
+              alt={APP_NAME}
               className="portal-stepmodal__wordmark wordmark"
             />
             <img

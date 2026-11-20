@@ -39,6 +39,7 @@ import {
 } from "@editor/auth/ssoAutoLogin";
 import { LoadingFallback } from "@editor/components/shared/LoadingFallback";
 import loginHeader from "@editor/assets/brand/modern-logo/LoginLightModeHeader.svg";
+import { APP_NAME } from "@editor/constants/branding";
 
 // A failed default sign-in counts towards the admin's lockout, so a tab that
 // saw one fail (or can't read storage) never tries again.
@@ -433,12 +434,12 @@ export default function Login() {
 
   // Set document meta
   useDocumentMeta({
-    title: `${t("login.title", "Sign in")} - Stirling PDF`,
+    title: `${t("login.title", "Sign in")} - ${APP_NAME}`,
     description: t(
       "app.description",
       "A free, private PDF editor you can run on any infrastructure.",
     ),
-    ogTitle: `${t("login.title", "Sign in")} - Stirling PDF`,
+    ogTitle: `${t("login.title", "Sign in")} - ${APP_NAME}`,
     ogDescription: t(
       "app.description",
       "A free, private PDF editor you can run on any infrastructure.",
@@ -489,12 +490,12 @@ export default function Login() {
         <div className="auth-logo-block">
           <img
             src={loginHeader}
-            alt="Stirling PDF"
+            alt={APP_NAME}
             className="auth-logo-header auth-logo-header--light"
           />
           <img
             src={withBasePath("/modern-logo/LoginDarkModeHeader.svg")}
-            alt="Stirling PDF"
+            alt={APP_NAME}
             className="auth-logo-header auth-logo-header--dark"
           />
         </div>

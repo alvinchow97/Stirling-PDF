@@ -9,7 +9,7 @@ import type { GroupEnabledResult } from "@editor/types/groupEnabled";
 import { useLocalProcessingOnly } from "@editor/hooks/useLocalProcessingOnly";
 
 const OFFLINE_REASON_FALLBACK =
-  "Requires your Stirling-PDF server (currently offline)";
+  "Requires your {{appName}} server (currently offline)";
 
 // A boolean, not the monitor's state object — that is reassigned every poll.
 const subscribeToMonitor = (onChange: () => void) =>

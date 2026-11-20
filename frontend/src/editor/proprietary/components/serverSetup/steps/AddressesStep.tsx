@@ -16,7 +16,7 @@ export function AddressesStep({ draft, update, errors }: SetupStepProps) {
           label={t("serverSetup.addresses.frontendUrl", "Web address")}
           info={t(
             "serverSetup.addresses.frontendUrlHelp",
-            "Where people open Stirling PDF. Used in emails, share links and QR codes.",
+            "Where people open {{appName}}. Used in emails, share links and QR codes.",
           )}
           placeholder="https://pdf.example.com"
           value={draft.frontendUrl}

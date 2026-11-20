@@ -177,7 +177,7 @@ public class EmailService {
                   <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0;">
                     <!-- Logo -->
                     <div style="text-align: center; padding: 20px; background-color: #222;">
-                      <img src="https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/main/docs/stirling-transparent.svg" alt="Stirling PDF" style="max-height: 60px;">
+                      <img src="https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/main/docs/stirling-transparent.svg" alt="AlvinPDF" style="max-height: 60px;">
                     </div>
                     <!-- Content -->
                     <div style="padding: 30px; color: #333;">
@@ -236,7 +236,7 @@ public class EmailService {
                   <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0;">
                     <!-- Logo -->
                     <div style="text-align: center; padding: 20px; background-color: #222;">
-                      <img src="https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/main/docs/stirling-transparent.svg" alt="Stirling PDF" style="max-height: 60px;">
+                      <img src="https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/main/docs/stirling-transparent.svg" alt="AlvinPDF" style="max-height: 60px;">
                     </div>
                     <!-- Content -->
                     <div style="padding: 30px; color: #333;">

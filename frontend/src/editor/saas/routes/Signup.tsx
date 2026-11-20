@@ -24,6 +24,7 @@ import {
 } from "@editor/routes/signup/SignupFormValidation";
 import { useAuthService } from "@editor/routes/signup/AuthService";
 import loginHeader from "@editor/assets/brand/modern-logo/LoginLightModeHeader.svg";
+import { APP_NAME } from "@editor/constants/branding";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -117,12 +118,12 @@ export default function Signup() {
   const baseUrl = getBaseUrl();
 
   useDocumentMeta({
-    title: `${t("signup.title", "Create an account")} - Stirling PDF`,
+    title: `${t("signup.title", "Create an account")} - ${APP_NAME}`,
     description: t(
       "app.description",
       "A free, private PDF editor you can run on any infrastructure.",
     ),
-    ogTitle: `${t("signup.title", "Create an account")} - Stirling PDF`,
+    ogTitle: `${t("signup.title", "Create an account")} - ${APP_NAME}`,
     ogDescription: t(
       "app.description",
       "A free, private PDF editor you can run on any infrastructure.",
@@ -210,12 +211,12 @@ export default function Signup() {
       <div className="auth-logo-block">
         <img
           src={loginHeader}
-          alt="Stirling PDF"
+          alt={APP_NAME}
           className="auth-logo-header auth-logo-header--light"
         />
         <img
           src={withBasePath("/modern-logo/LoginDarkModeHeader.svg")}
-          alt="Stirling PDF"
+          alt={APP_NAME}
           className="auth-logo-header auth-logo-header--dark"
         />
       </div>

@@ -1728,12 +1728,12 @@ public class ApplicationProperties {
 
             @Deprecated
             public String getCreator() {
-                return creator == null || creator.trim().isEmpty() ? "Stirling-PDF" : creator;
+                return creator == null || creator.trim().isEmpty() ? "AlvinPDF" : creator;
             }
 
             @Deprecated
             public String getProducer() {
-                return producer == null || producer.trim().isEmpty() ? "Stirling-PDF" : producer;
+                return producer == null || producer.trim().isEmpty() ? "AlvinPDF" : producer;
             }
         }
     }
@@ -1940,13 +1940,11 @@ public class ApplicationProperties {
                 private String producer;
 
                 public String getCreator() {
-                    return creator == null || creator.trim().isEmpty() ? "Stirling-PDF" : creator;
+                    return creator == null || creator.trim().isEmpty() ? "AlvinPDF" : creator;
                 }
 
                 public String getProducer() {
-                    return producer == null || producer.trim().isEmpty()
-                            ? "Stirling-PDF"
-                            : producer;
+                    return producer == null || producer.trim().isEmpty() ? "AlvinPDF" : producer;
                 }
             }
         }

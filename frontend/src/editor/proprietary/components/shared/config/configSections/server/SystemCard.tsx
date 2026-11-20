@@ -20,6 +20,7 @@ import {
 import { Z_INDEX_OVER_CONFIG_MODAL } from "@editor/styles/zIndex";
 import type { GeneralCardProps } from "@editor/components/shared/config/configSections/server/serverCardProps";
 import { privateContentClassName } from "@editor/components/shared/privateContentClassName";
+import { APP_NAME } from "@editor/constants/branding";
 
 /** Branding, languages and the system-wide toggles. Writes ui.* and system.*. */
 export function SystemCard({
@@ -102,7 +103,7 @@ export function SystemCard({
                 ui: { ...settings.ui, appNameNavbar: e.target.value },
               })
             }
-            placeholder="Stirling PDF"
+            placeholder={APP_NAME}
             disabled={!loginEnabled}
           />
         </div>

@@ -78,6 +78,7 @@ import type { FileSidebarProps } from "@editor/components/shared/FileSidebar";
 import { Button } from "@editor/ui/Button";
 import "@editor/components/layout/WorkspaceFrame.css";
 import "@editor/pages/HomePage.css";
+import { APP_NAME } from "@editor/constants/branding";
 
 const SWIPE_HINT_SEEN_STORAGE_KEY = "stirling.mobileSwipeHintSeen";
 
@@ -380,7 +381,7 @@ export default function HomePage() {
     )?.hideToolPanel ??
       false);
 
-  const brandAltText = t("home.mobile.brandAlt", "Stirling PDF logo");
+  const brandAltText = t("home.mobile.brandAlt", "{{appName}} logo");
 
   const quickNavToolReasons = useMemo(() => {
     const reasons: QuickNavToolReasons = {};
@@ -556,7 +557,7 @@ export default function HomePage() {
   // all share the one `convert` tool, so prefer a per-URL SEO override when the
   // path has one - this keeps the hydrated title/description matching the
   // keyword-targeted copy that crawlers see in the prerendered HTML.
-  const appName = config?.appNameNavbar || "Stirling PDF";
+  const appName = config?.appNameNavbar || APP_NAME;
   // The override copy is English-only (it mirrors the prerendered HTML), so
   // every other locale keeps its translated tool name and description.
   const isEnglish = (i18n.resolvedLanguage || i18n.language || "").startsWith(

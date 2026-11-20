@@ -23,10 +23,11 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, "..");
 const read = (p) => fs.readFileSync(path.join(ROOT, p), "utf8");
 
-const SITE_NAME = "Stirling PDF";
-// SITE_TITLE is the home page's own title/social headline; SITE_NAME is the
-// suffix every other page carries, so the download count appears once.
-const SITE_TITLE = "Stirling PDF - 30M+ Downloads";
+// Must match what the app shows: both read VITE_APP_NAME from .env.
+const SITE_NAME = read(".env")
+  .match(/^VITE_APP_NAME=(.+)$/m)[1]
+  .trim();
+const SITE_TITLE = SITE_NAME;
 const SITE_DESC =
   "A free, private PDF editor you can run on any infrastructure.";
 const DEFAULT_IMAGE_BASENAME = "home";

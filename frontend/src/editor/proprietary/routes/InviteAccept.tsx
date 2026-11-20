@@ -22,6 +22,7 @@ import { BASE_PATH } from "@editor/constants/app";
 import apiClient from "@editor/services/apiClient";
 import { Button } from "@editor/ui/Button";
 import { privateContentClassName } from "@editor/components/shared/privateContentClassName";
+import { APP_NAME } from "@editor/constants/branding";
 interface InviteData {
   email: string | null;
   role: string;
@@ -46,12 +47,12 @@ export default function InviteAccept() {
 
   // Set document meta
   useDocumentMeta({
-    title: `${t("invite.welcome", "Welcome to Stirling PDF")} - Stirling PDF`,
+    title: `${t("invite.welcome", "Welcome to {{appName}}")} - ${APP_NAME}`,
     description: t(
       "app.description",
       "A free, private PDF editor you can run on any infrastructure.",
     ),
-    ogTitle: `${t("invite.welcome", "Welcome to Stirling PDF")} - Stirling PDF`,
+    ogTitle: `${t("invite.welcome", "Welcome to {{appName}}")} - ${APP_NAME}`,
     ogDescription: t(
       "app.description",
       "A free, private PDF editor you can run on any infrastructure.",

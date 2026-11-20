@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { APP_NAME } from "@editor/constants/branding";
 
 interface MetaOptions {
   title?: string;
@@ -75,7 +76,7 @@ export const useDocumentMeta = (meta: MetaOptions) => {
     }
 
     // Update OpenGraph tags
-    updateOrCreateProperty("og:site_name", "Stirling PDF");
+    updateOrCreateProperty("og:site_name", APP_NAME);
     updateOrCreateProperty("og:locale", i18n.language.replace("-", "_"));
 
     if (meta.ogTitle) {

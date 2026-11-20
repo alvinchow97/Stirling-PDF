@@ -4,6 +4,7 @@ import ErrorMessage from "@editor/auth/ui/ErrorMessage";
 import EmailPasswordForm from "@editor/auth/ui/EmailPasswordForm";
 import OAuthButtons from "@editor/auth/ui/OAuthButtons";
 import type { SpringLoginState } from "@editor/auth/ui/useSpringLogin";
+import { APP_NAME } from "@editor/constants/branding";
 
 interface SpringLoginFormProps {
   /** Login state + handlers, from useSpringLogin. */
@@ -42,7 +43,7 @@ export default function SpringLoginForm({
   state,
   logoSrc,
   logoDarkSrc,
-  logoAlt = "Stirling PDF",
+  logoAlt = APP_NAME,
   oauthCtaPrefix,
   oauthUseNewStyle,
   showEmailForm,

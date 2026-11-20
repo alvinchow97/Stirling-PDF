@@ -7,6 +7,7 @@ import { Icon } from "@editor/ui/Icon";
 import { Z_INDEX_ONBOARDING_CARD } from "@editor/styles/zIndex";
 import stirlingMark from "@editor/assets/brand/modern-logo/logo512.png";
 import styles from "@editor/components/onboarding/InitialOnboardingModal/InitialOnboardingModal.module.css";
+import { APP_NAME } from "@editor/constants/branding";
 
 /** A footer button. `action` is an opaque string handled by the caller. */
 export interface ShellButton {
@@ -60,7 +61,7 @@ export function ShellHero({
 }) {
   if (appIcon) {
     return (
-      <img src={stirlingMark} alt="Stirling" className={styles.heroAppIcon} />
+      <img src={stirlingMark} alt={APP_NAME} className={styles.heroAppIcon} />
     );
   }
   return <div className={styles.heroTile}>{children}</div>;

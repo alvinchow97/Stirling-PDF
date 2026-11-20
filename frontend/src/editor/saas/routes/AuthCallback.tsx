@@ -13,6 +13,7 @@ import ErrorMessage from "@editor/auth/ui/ErrorMessage";
 import { Spinner } from "@editor/ui/Spinner";
 import "@editor/auth/ui/auth.css";
 import loginHeader from "@editor/assets/brand/modern-logo/LoginLightModeHeader.svg";
+import { APP_NAME } from "@editor/constants/branding";
 
 interface CallbackState {
   status: "processing" | "success" | "error";
@@ -214,12 +215,12 @@ export default function AuthCallback() {
       <div className="auth-logo-block">
         <img
           src={loginHeader}
-          alt="Stirling PDF"
+          alt={APP_NAME}
           className="auth-logo-header auth-logo-header--light"
         />
         <img
           src={withBasePath("/modern-logo/LoginDarkModeHeader.svg")}
-          alt="Stirling PDF"
+          alt={APP_NAME}
           className="auth-logo-header auth-logo-header--dark"
         />
       </div>

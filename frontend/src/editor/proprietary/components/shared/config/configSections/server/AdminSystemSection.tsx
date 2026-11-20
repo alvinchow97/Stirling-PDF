@@ -114,7 +114,7 @@ export default function AdminSystemSection() {
         // Was the Features row's own hook and its own GET of this same section.
         serverCertificate: system.serverCertificate || {
           enabled: true,
-          organizationName: "Stirling PDF Inc",
+          organizationName: "AlvinPDF",
           validity: 365,
           regenerateOnStartup: false,
         },
@@ -543,7 +543,7 @@ export default function AdminSystemSection() {
           )}
           description={t(
             "admin.settings.features.serverCertificate.description",
-            'Generate the certificate that backs the "Sign with Stirling-PDF" signing feature.',
+            'Generate the certificate that backs the "Sign with {{appName}}" signing feature.',
           )}
         >
           <ServerCertificateCard {...generalCard} />

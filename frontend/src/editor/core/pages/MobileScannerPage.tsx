@@ -25,6 +25,7 @@ import { warpPerspective } from "@editor/utils/perspectiveWarp";
 import apiClient from "@editor/services/apiClient";
 import { fitThumbs, THUMB_GAP } from "@editor/utils/mobileScannerThumbs";
 import { privateContentClassName } from "@editor/components/shared/privateContentClassName";
+import { APP_NAME } from "@editor/constants/branding";
 
 const API_BASE = (apiClient.defaults.baseURL ?? "").replace(/\/+$/, "");
 
@@ -923,10 +924,10 @@ export default function MobileScannerPage() {
         >
           <Group gap="sm" align="center" wrap="nowrap">
             <LogoIcon
-              alt={t("home.mobile.brandAlt", "Stirling PDF logo")}
+              alt={t("home.mobile.brandAlt", "{{appName}} logo")}
               style={{ height: FLUID.logo, width: FLUID.logo }}
             />
-            <Wordmark alt="Stirling PDF" style={{ height: FLUID.wordmark }} />
+            <Wordmark alt={APP_NAME} style={{ height: FLUID.wordmark }} />
           </Group>
         </Box>
       )}

@@ -35,7 +35,7 @@ export function QuotePaper({
         <div className="portal-qb__paper-head">
           <div>
             <div className="portal-qb__paper-brand">
-              {t("portal.procurement.builder.paperBrand", "Stirling PDF")}
+              {t("portal.procurement.builder.paperBrand", "{{appName}}")}
             </div>
             <div className="portal-qb__paper-eyebrow">
               {t("portal.procurement.builder.paperEyebrow")}

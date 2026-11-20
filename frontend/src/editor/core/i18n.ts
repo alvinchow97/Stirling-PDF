@@ -2,6 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import TomlBackend from "@editor/i18n/tomlBackend";
+import { APP_NAME } from "@editor/constants/branding";
 import {
   supportedLanguages,
   rtlLanguages,
@@ -40,6 +41,7 @@ i18n
 
     interpolation: {
       escapeValue: false, // React already escapes values
+      defaultVariables: { appName: APP_NAME },
     },
 
     backend: {

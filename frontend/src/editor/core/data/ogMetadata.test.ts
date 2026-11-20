@@ -726,14 +726,12 @@ describe("shipped OG manifests", () => {
 
   it("gives the self-hosted home the brand card, verbatim", async () => {
     const manifest = await load("og-metadata.json");
-    expect(manifest.default.title).toBe("Stirling PDF - 30M+ Downloads");
+    expect(manifest.default.title).toBe("AlvinPDF");
     expect(manifest.default.description).toBe(
       "A free, private PDF editor you can run on any infrastructure.",
     );
     const html = injectOg(TEMPLATE, manifest.default, { isHome: true });
-    expect(html).toContain(
-      '<meta name="twitter:title" content="Stirling PDF - 30M+ Downloads" />',
-    );
+    expect(html).toContain('<meta name="twitter:title" content="AlvinPDF" />');
     expect(html).toContain(
       '<meta name="twitter:description" content="A free, private ' +
         'PDF editor you can run on any infrastructure." />',

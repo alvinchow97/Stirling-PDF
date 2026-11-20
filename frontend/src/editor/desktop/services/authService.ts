@@ -11,6 +11,7 @@ import {
   STIRLING_SAAS_URL,
   SUPABASE_KEY,
 } from "@editor/constants/connection";
+import { APP_NAME } from "@editor/constants/branding";
 
 export interface UserInfo {
   username: string;
@@ -489,7 +490,7 @@ export class AuthService {
         else if (errMsg.includes("404") || errMsg.includes("not found")) {
           this.setAuthStatus("unauthenticated", null);
           throw new Error(
-            "Login endpoint not found. Please ensure you are connecting to a valid Stirling PDF server.",
+            `Login endpoint not found. Please ensure you are connecting to a valid ${APP_NAME} server.`,
             {
               cause: error,
             },

@@ -1,9 +1,9 @@
 {
   "$schema": "../../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "Stirling PDF",
+  "productName": "AlvinPDF",
   "mainBinaryName": "Stirling-PDF",
   "version": "3.3.0",
-  "identifier": "stirling.pdf.dev",
+  "identifier": "com.alvinpdf.desktop",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:5173",

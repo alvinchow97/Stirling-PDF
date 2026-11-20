@@ -607,7 +607,7 @@ export async function createAccessibilityReportPdf(
     layout: LAYOUT,
     regular: await doc.embedFont(StandardFonts.Helvetica),
     bold: await doc.embedFont(StandardFonts.HelveticaBold),
-    footerText: t("checkAccessibility.pdf.footer", "Checked with Stirling PDF"),
+    footerText: t("checkAccessibility.pdf.footer", "Checked with {{appName}}"),
     pageLabel: (n) => t("checkAccessibility.pdf.page", "Page {{n}}", { n }),
   });
 

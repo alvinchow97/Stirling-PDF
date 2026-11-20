@@ -2,6 +2,7 @@ import { Icon } from "@editor/ui/Icon";
 import { useTranslation } from "react-i18next";
 import { ActionIcon } from "@editor/ui/ActionIcon";
 import { Logo } from "@editor/ui/Logo";
+import { APP_NAME } from "@editor/constants/branding";
 
 interface LoginHeaderProps {
   title: string;
@@ -47,7 +48,7 @@ export default function LoginHeader({
           <Logo
             variant="iconOnly"
             iconHeight="2rem"
-            alt="Stirling PDF"
+            alt={APP_NAME}
             style={{ flexShrink: 0 }}
           />
           {title && (

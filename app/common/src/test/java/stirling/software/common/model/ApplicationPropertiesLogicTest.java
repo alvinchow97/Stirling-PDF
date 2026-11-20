@@ -175,8 +175,8 @@ class ApplicationPropertiesLogicTest {
         ApplicationProperties.EnterpriseEdition.CustomMetadata eMeta = ee.getCustomMetadata();
         eMeta.setCreator("  ");
         eMeta.setProducer(null);
-        assertEquals("Stirling-PDF", eMeta.getCreator());
-        assertEquals("Stirling-PDF", eMeta.getProducer());
+        assertEquals("AlvinPDF", eMeta.getCreator());
+        assertEquals("AlvinPDF", eMeta.getProducer());
     }
 
     @Test
@@ -185,8 +185,8 @@ class ApplicationPropertiesLogicTest {
         Premium.ProFeatures.CustomMetadata pMeta = pf.getCustomMetadata();
         pMeta.setCreator("");
         pMeta.setProducer("");
-        assertEquals("Stirling-PDF", pMeta.getCreator());
-        assertEquals("Stirling-PDF", pMeta.getProducer());
+        assertEquals("AlvinPDF", pMeta.getCreator());
+        assertEquals("AlvinPDF", pMeta.getProducer());
     }
 
     @Test

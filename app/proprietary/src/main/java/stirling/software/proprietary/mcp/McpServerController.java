@@ -169,7 +169,7 @@ public class McpServerController {
         caps.putObject("tools");
         ObjectNode info = result.putObject("serverInfo");
         info.put("name", SERVER_NAME);
-        info.put("title", "Stirling PDF");
+        info.put("title", "AlvinPDF");
         info.put("version", applicationProperties.getAutomaticallyGenerated().getAppVersion());
         return result;
     }

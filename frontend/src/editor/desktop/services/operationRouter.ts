@@ -347,7 +347,7 @@ export class OperationRouter {
         throw new Error(
           i18n.t(
             "selfHosted.offline.toolNotAvailableLocally",
-            'Your Stirling-PDF server is offline and "{{endpoint}}" is not available on the local backend.',
+            'Your {{appName}} server is offline and "{{endpoint}}" is not available on the local backend.',
             { endpoint: endpointToCheck },
           ),
         );

@@ -5,6 +5,7 @@ import { TextInput, Stack, Paper, Group } from "@mantine/core";
 import PendingBadge from "@editor/components/shared/config/PendingBadge";
 import type { GeneralCardProps } from "@editor/components/shared/config/configSections/server/serverCardProps";
 import { privateContentClassName } from "@editor/components/shared/privateContentClassName";
+import { APP_NAME } from "@editor/constants/branding";
 
 /** Metadata stamped onto every processed document. Saved under premium.proFeatures. */
 export function CustomMetadataCard({
@@ -109,7 +110,7 @@ export function CustomMetadataCard({
                 },
               })
             }
-            placeholder="Stirling-PDF"
+            placeholder={APP_NAME}
             disabled={!loginEnabled}
           />
         </div>
@@ -146,7 +147,7 @@ export function CustomMetadataCard({
                 },
               })
             }
-            placeholder="Stirling-PDF"
+            placeholder={APP_NAME}
             disabled={!loginEnabled}
           />
         </div>

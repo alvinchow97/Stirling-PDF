@@ -18,7 +18,7 @@ export function AnalyticsStep() {
       <p className={styles.noteText}>
         {t(
           "serverSetup.analytics.note",
-          "Share usage data from this server with us to help us improve Stirling PDF. We never collect files or their contents.",
+          "Share usage data from this server with us to help us improve {{appName}}. We never collect files or their contents.",
         )}
       </p>
       <p className={styles.noteText}>

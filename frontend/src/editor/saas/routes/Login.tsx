@@ -31,6 +31,7 @@ import { LoadingFallback } from "@editor/components/shared/LoadingFallback";
 import loginHeader from "@editor/assets/brand/modern-logo/LoginLightModeHeader.svg";
 import { PrivateContent } from "@editor/components/shared/PrivateContent";
 import { privateContentClassName } from "@editor/components/shared/privateContentClassName";
+import { APP_NAME } from "@editor/constants/branding";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -91,12 +92,12 @@ export default function Login() {
   const baseUrl = getBaseUrl();
 
   useDocumentMeta({
-    title: `${t("login.title", "Sign in")} - Stirling PDF`,
+    title: `${t("login.title", "Sign in")} - ${APP_NAME}`,
     description: t(
       "app.description",
       "A free, private PDF editor you can run on any infrastructure.",
     ),
-    ogTitle: `${t("login.title", "Sign in")} - Stirling PDF`,
+    ogTitle: `${t("login.title", "Sign in")} - ${APP_NAME}`,
     ogDescription: t(
       "app.description",
       "A free, private PDF editor you can run on any infrastructure.",
@@ -299,12 +300,12 @@ export default function Login() {
       <div className="auth-logo-block">
         <img
           src={loginHeader}
-          alt="Stirling PDF"
+          alt={APP_NAME}
           className="auth-logo-header auth-logo-header--light"
         />
         <img
           src={withBasePath("/modern-logo/LoginDarkModeHeader.svg")}
-          alt="Stirling PDF"
+          alt={APP_NAME}
           className="auth-logo-header auth-logo-header--dark"
         />
       </div>

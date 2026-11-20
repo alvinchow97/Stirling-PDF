@@ -2,6 +2,8 @@
 
 interface ImportMetaEnv {
   // Used by all builds (.env)
+  /** Product name; translations reach it as {{appName}}. */
+  readonly VITE_APP_NAME: string;
   readonly VITE_API_BASE_URL: string;
   /** "true" includes the admin portal's lazy route/chunk in the editor build. */
   readonly VITE_INCLUDE_PORTAL: string;

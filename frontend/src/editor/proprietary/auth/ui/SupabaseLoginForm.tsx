@@ -4,6 +4,7 @@ import EmailPasswordForm from "@editor/auth/ui/EmailPasswordForm";
 import OAuthButtons from "@editor/auth/ui/OAuthButtons";
 import type { SupabaseLoginState } from "@editor/auth/ui/useSupabaseLogin";
 import "@editor/auth/ui/auth.css";
+import { APP_NAME } from "@editor/constants/branding";
 
 interface SupabaseLoginFormProps {
   /** Login state + handlers, from useSupabaseLogin. */
@@ -21,7 +22,7 @@ interface SupabaseLoginFormProps {
 export default function SupabaseLoginForm({
   state,
   logoSrc,
-  logoAlt = "Stirling PDF",
+  logoAlt = APP_NAME,
 }: SupabaseLoginFormProps) {
   const { t } = useTranslation();
   const {

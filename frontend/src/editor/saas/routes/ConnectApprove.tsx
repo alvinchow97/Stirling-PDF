@@ -19,6 +19,7 @@ import {
 } from "@editor/routes/ConnectApproveView";
 import "@editor/routes/authShared/saas-auth.css";
 import "@editor/routes/connect.css";
+import { APP_NAME } from "@editor/constants/branding";
 
 interface ApproveResponse {
   callbackUrl: string;
@@ -185,12 +186,12 @@ export default function ConnectApprove() {
       <div className="auth-logo-block">
         <img
           src={loginHeader}
-          alt="Stirling PDF"
+          alt={APP_NAME}
           className="auth-logo-header auth-logo-header--light"
         />
         <img
           src={withBasePath("/modern-logo/LoginDarkModeHeader.svg")}
-          alt="Stirling PDF"
+          alt={APP_NAME}
           className="auth-logo-header auth-logo-header--dark"
         />
       </div>

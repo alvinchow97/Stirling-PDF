@@ -143,7 +143,7 @@ export function OnboardingChecklist() {
               className={styles.logo}
             />
             <span className={styles.title}>
-              {t("onboarding.checklist.title", "Set up Stirling PDF")}
+              {t("onboarding.checklist.title", "Set up {{appName}}")}
             </span>
           </span>
           <span className={styles.headerRight}>
