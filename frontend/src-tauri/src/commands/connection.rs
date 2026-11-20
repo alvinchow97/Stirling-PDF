@@ -27,20 +27,20 @@ const PROVISIONING_FILE_NAME: &str = "stirling-provisioning.json";
 
 /// How the desktop auto-updater should behave on startup.
 ///
-/// * `Prompt` – default. Show the update popup when a new version is available
-///   and let the user decide whether to install.
+/// * `Prompt` – show the update popup when a new version is available and let
+///   the user decide whether to install.
 /// * `Auto` – silently download and install updates on startup, then restart.
 ///   Intended for managed deployments (Intune/MDM) where the user cannot
 ///   (or should not) be prompted.
-/// * `Disabled` – never check for updates, never show the update UI.
-///   Administrators are expected to push updates through their normal
-///   packaging flow.
+/// * `Disabled` – default. Never check for updates, never show the update UI.
+///   This build is a rebranded fork, so the upstream release feed would offer
+///   an install that replaces it.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, Default)]
 #[serde(rename_all = "lowercase")]
 pub enum UpdateMode {
-    #[default]
     Prompt,
     Auto,
+    #[default]
     Disabled,
 }
 
@@ -546,9 +546,8 @@ pub async fn is_first_launch(app_handle: AppHandle) -> Result<bool, String> {
 
 /// Read the configured update mode from the tauri store.
 ///
-/// Returns [`UpdateMode::Prompt`] when the store is unavailable or no mode
-/// has been set — the prompt-the-user flow is the safe default for normal,
-/// non-managed installs.
+/// Returns [`UpdateMode::Disabled`] when the store is unavailable or no mode
+/// has been set.
 pub(crate) fn read_update_mode(app_handle: &AppHandle) -> UpdateMode {
     read_update_mode_info(app_handle).mode
 }

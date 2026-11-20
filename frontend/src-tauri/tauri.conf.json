@@ -83,9 +83,7 @@
       }
     },
     "updater": {
-      "endpoints": [
-        "https://github.com/Stirling-Tools/Stirling-PDF/releases/latest/download/latest.json"
-      ],
+      "endpoints": [],
       "dialog": false,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDZEREM2QTgwNjdGNzdCOUQKUldTZGUvZG5nR3JjYmZ4TlZ3YVpHTVIzd2hBT2c4c000RDNIN2tLZENEblE4ZXFhU3J5V0lQanEK",
       "windows": {

@@ -132,19 +132,18 @@ class DesktopUpdateService {
   /**
    * Return the configured update mode plus whether it's locked by provisioning.
    *
-   * Falls back to `{mode: 'prompt', locked: false}` if the Tauri command is
-   * unavailable (e.g. running in a browser dev environment) so non-managed
-   * installs always get the default interactive flow.
+   * Falls back to `{mode: 'disabled', locked: false}`, the native default, if
+   * the Tauri command is unavailable (e.g. running in a browser dev environment).
    */
   async getUpdateModeInfo(): Promise<UpdateModeInfo> {
     try {
       return await invoke<UpdateModeInfo>("get_update_mode");
     } catch (error) {
       console.warn(
-        "[DesktopUpdateService] get_update_mode failed, defaulting to prompt/unlocked:",
+        "[DesktopUpdateService] get_update_mode failed, defaulting to disabled/unlocked:",
         error,
       );
-      return { mode: "prompt", locked: false };
+      return { mode: "disabled", locked: false };
     }
   }
 

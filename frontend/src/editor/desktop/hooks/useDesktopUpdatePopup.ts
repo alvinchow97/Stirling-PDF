@@ -74,7 +74,7 @@ export function useDesktopUpdatePopup() {
     const timer = setTimeout(async () => {
       // Runs in every connection mode: the desktop binary is local even when signed in to the cloud.
       let mode: Awaited<ReturnType<typeof desktopUpdateService.getUpdateMode>> =
-        "prompt";
+        "disabled";
       try {
         mode = await desktopUpdateService.getUpdateMode();
       } catch {
